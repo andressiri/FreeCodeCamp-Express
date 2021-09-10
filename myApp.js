@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 console.log("Hello World");
-app.get("/public", express.static(__dirname + "/public"));
+app.use("/public", express.static(__dirname + "/public"));
 
 
 
