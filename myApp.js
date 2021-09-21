@@ -35,9 +35,18 @@ app.get("/now", (req, res, next) => {
 });
 
 app.get("/:word/echo", (req, res) => {
-  const word = req.params;
+  const { word } = req.params;
   res.json({
     echo: word
+  });
+});
+
+app.get("/name", (req, res) => {
+  var firstName = req.query.first;
+  var lastName = req.query.last;
+
+  res.json({
+    name: `${firstName} ${lastName}`
   });
 });
 
