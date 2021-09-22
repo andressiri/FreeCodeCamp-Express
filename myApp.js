@@ -46,6 +46,7 @@ app.use((req, res, next) => {
   bodyParser.urlencoded({extended: false})
   next();
 });
+app.use(bodyParser.json());
 
 app.get("/name", (req, res) => {
   var firstName = req.query.first;
